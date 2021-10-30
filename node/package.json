@@ -1,0 +1,14 @@
+{
+    "name": "node",
+    "version": "1.0.0",
+    "description": "",
+    "main": "main.ts",
+    "scripts": {
+        "dserve": "nodemon main.ts"
+    },
+    "dependencies": {
+        "express": "^4.17.1",
+        "socket.io": "^4.3.1",
+        "socket.io-client": "^4.3.2"
+    }
+}

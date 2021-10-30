@@ -1,0 +1,14 @@
+{
+    "name": "network",
+    "scripts": {
+        "tracker-dserve": "nodemon ./tracker/server.ts",
+        "node-dserve": "nodemon ./node/main.ts",
+        "postinstall": "cd node && npm i && cd ../tracker && npm i"
+    },
+    "devDependencies": {
+        "@types/express": "^4.17.13",
+        "@types/socket.io": "^3.0.2",
+        "nodemon": "^2.0.4",
+        "ts-node": "^10.4.0"
+    }
+}
