@@ -4,7 +4,14 @@ Simple network structure to build applications from
 
 ### Structure
 
-Each new node connects to the tracker via Websockets. Once the connection is established, nodes can communicate with other nodes thru the socket.io library. 
+Each new node connects to the tracker via Websockets. Once the connection is established, nodes can communicate with other nodes thru the socket.io library.
+
+You can also interact with the tracker via a REST api. The default url is localhost:8333
+
+| method | url    | description                                     |
+|--------|--------|-------------------------------------------------|
+| GET    | /nodes | Show nodes connected (self-generated socket.id) |
+|        |        |                                                 |
 
 ### Execution
 
@@ -17,7 +24,6 @@ To spin up one node (dev mode) with automatic reload `npm run node-dserve`
 ### TODOs
 
 - Docker / vagrant files
-- Heartbeat from nodes
-- Use WebRTC instead of Websockets
 - Build commands - production build
 - Multiple trackers - balance
+- Use WebRTC instead of Websockets

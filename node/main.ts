@@ -1,6 +1,19 @@
-import { ioConnect, emit, onBroadcastRecieved } from './socket'
+import { emit, onBroadcastRecieved } from './socket'
 
-ioConnect()
+onBroadcastRecieved('node-connected', (nodeId: string) => {
+    console.log(`New node connected\n  ${nodeId}`)
+})
+
+onBroadcastRecieved("connect_error", (err: any) => {
+    console.log(`Connection error due to ${err.message}`);
+})
+
+onBroadcastRecieved('node-message', (nodeId: string, message: any) => {
+    console.log(`Message from ${nodeId}\n  ${message}`)
+})
+
+emit('join-network')
+emit('message', 'test message')
 
 // emit -> emits a message to the network
 // onBroadcastRecieved -> defines a listener for the network
