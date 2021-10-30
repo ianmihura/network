@@ -12,8 +12,6 @@ onBroadcastRecieved('node-message', (nodeId: string, message: any) => {
     console.log(`Message from ${nodeId}\n  ${message}`)
 })
 
-emit('join-network')
-emit('message', 'test message')
+emit('join-network', console.log)
 
-// emit -> emits a message to the network
-// onBroadcastRecieved -> defines a listener for the network
+emit('message', 'test message')

@@ -3,7 +3,7 @@ import { addNode, deleteNode } from './nodes'
 
 export const ioConnect = (socket: any) => {
     console.log(`Initializing socket connection`)
-    socket.on('join-network', () => {
+    socket.on('join-network', (callback: any) => {
         console.log(`Node joining network\n  ${socket.id}`)
         addNode(socket.id)
         socket.broadcast.emit('node-connected', socket.id)
@@ -19,5 +19,7 @@ export const ioConnect = (socket: any) => {
 
             socket.broadcast.emit('node-disconnected', socket.id)
         })
+
+        callback(`Node connected with id ${socket.id}`)
     })
 }
