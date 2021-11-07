@@ -26,4 +26,4 @@ To spin up one node (dev mode) with automatic reload `npm run node-dserve`
 - Docker / vagrant files
 - Build commands - production build
 - Multiple trackers - balance
-- Use WebRTC instead of Websockets
+- Use WebRTC instead of Websockets 
