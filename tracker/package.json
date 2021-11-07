@@ -1,7 +1,5 @@
 {
     "name": "tracker",
-    "version": "1.0.0",
-    "description": "",
     "main": "server.ts",
     "scripts": {
         "dserve": "nodemon server.ts"
